@@ -17,7 +17,7 @@ function AuthUsingProviders(){
         </div>
         <Stack direction="column" m="5" gap="3" align="center">
             <Button variant="surface" w="72" >{ googleLogoSVG }Continue with Google</Button>
-            <Button variant="surface" w="72" >{ githubLogoSVG }Continue with Google </Button>
+            <Button variant="surface" w="72" >{ githubLogoSVG }Continue with Github </Button>
         </Stack>
     </>);
 }
