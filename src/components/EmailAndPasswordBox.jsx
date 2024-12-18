@@ -1,9 +1,9 @@
-import { Box, Field, Input, defineStyle  } from "@chakra-ui/react"
+import { Box, Button, Field, Input, defineStyle  } from "@chakra-ui/react"
 import { Stack, Text } from "@chakra-ui/react"
 import { PasswordInput, PasswordStrengthMeter } from "@/components/ui/password-input"
 import { useState } from "react"
 
-function EmailAndPasswordBox({email,setEmail,password,setPassword}){
+function EmailAndPasswordBox({email,setEmail,password,setPassword,buttonText}){
     
     const [visible, setVisible] = useState(false);
 
@@ -38,6 +38,7 @@ function EmailAndPasswordBox({email,setEmail,password,setPassword}){
                 />
             </Stack>
             <PasswordStrengthMeter m="1"  w="72" value={1} />
+            <Button w="72" >{buttonText}</Button>
         </Field.Root>  
     </>)
 }

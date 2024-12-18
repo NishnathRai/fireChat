@@ -1,4 +1,4 @@
-import { Tabs , Image, Box, Text } from "@chakra-ui/react"
+import { Tabs , Image, Box, Text, Button } from "@chakra-ui/react"
 import { VscSignIn } from "react-icons/vsc";
 import { LuFolder, LuUser } from "react-icons/lu";
 import { useColorMode } from "./ui/color-mode";

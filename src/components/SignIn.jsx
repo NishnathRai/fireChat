@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import EmailAndPasswordBox from "./EmailAndPasswordBox";
+import { Button } from "@chakra-ui/react";
 
 function SigIn(){
 
@@ -12,6 +13,7 @@ function SigIn(){
             setEmail={setEmail}
             password={password}
             setPassword={setPassword}
+            buttonText={"Sign in"}
         />
     </>);
 }

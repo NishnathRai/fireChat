@@ -12,6 +12,7 @@ function Signup(){
             setEmail={setEmail}
             password={password}
             setPassword={setPassword}
+            buttonText={"Sign up"}
         />
     </>);
 }
