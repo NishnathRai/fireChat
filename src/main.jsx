@@ -21,11 +21,10 @@ function Main(){
             alt='Logo fireChat'
             style={{
                 position:"fixed",
-                top:"7px",
-                left:"5px",
+                top:"13px",
+                left:"7px",
             }}
         />
-        { console.log(colorMode)}
         <RouterProvider  router={router} />
     </>)
 }
