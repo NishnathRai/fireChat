@@ -1,10 +1,12 @@
 import AuthUsingProviders from "@/components/AuthUsingProviders";
 import SignInUpTabAndInput from "@/components/SignInUpTabAndInput";
+import useAuthState from "@/hooks/useAuthState";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 function Login(){
 
-
+    useAuthState(useLocation(),useNavigate());
 
     return (<>
         <div 

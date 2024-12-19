@@ -12,6 +12,7 @@ function usemakeUserSignupWithPassword(navigate,email,password,setEmail,setPassw
         setEmail("");
         setPassword("");
         setErrorMessage("");
+        console.log(val);
         navigate("/");
     })
     .catch((err)=>{

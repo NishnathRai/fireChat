@@ -6,11 +6,13 @@ function useSigninWithGithub(navigate){
     signInWithPopup( auth , provider )
     .then((val)=>{
         console.log(val);
+        navigate("/");
     })
     .catch((err)=>{
         if(err.message="auth/account-exists-with-different-credential"){
             console.log("Account has Already created with Google");
         }
+        console.log(err);
     })
 }
 

@@ -1,12 +1,12 @@
 import { createRoot } from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
+import { RouterProvider, useLocation } from 'react-router-dom'
 import router from './router.jsx'
 import { Provider } from "@/components/ui/provider"
 import logoB from "/src/assets/fireChat_transparent-BL.png";
 import logoW from "/src/assets/fireChat_transparent-WL.png";
 import { Image } from '@chakra-ui/react';
 import { useColorMode } from './components/ui/color-mode.jsx';
-import { useEffect } from 'react';
+import useAuthState from './hooks/useAuthState.js';
 
 
 function Main(){

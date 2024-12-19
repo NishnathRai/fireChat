@@ -7,12 +7,13 @@ function useSigninWithGoogle(navigate){
     signInWithPopup(auth,provider)
     .then((val)=>{
         console.log(val);
-        // navigate("/");
+        navigate("/");
     })
     .catch((err)=>{
         if(err.message="auth/account-exists-with-different-credential"){
             console.log("Account has Already created with another Provider");
         }
+        console.log(err);
     })
 }
 
