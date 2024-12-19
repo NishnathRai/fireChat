@@ -1,8 +1,14 @@
+import useSigninWithGoogle from "@/hooks/useSigninWithGoogle";
 import OrLine from "./OrLine";
 import { Button } from "@chakra-ui/react"
 import { Stack } from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import useSigninWithGithub from "@/hooks/useSigninWithGithub";
 
 function AuthUsingProviders(){
+
+    const navigate = useNavigate();
 
     return (<>
         <div
@@ -16,8 +22,8 @@ function AuthUsingProviders(){
             <OrLine/>
         </div>
         <Stack direction="column" m="5" gap="3" align="center">
-            <Button variant="surface" w="72" >{ googleLogoSVG }Continue with Google</Button>
-            <Button variant="surface" w="72" >{ githubLogoSVG }Continue with Github </Button>
+            <Button variant="surface" onClick={()=>{useSigninWithGoogle(navigate)}}  w="72" >{ googleLogoSVG }Continue with Google</Button>
+            <Button variant="surface" w="72" onClick={()=>{useSigninWithGithub(navigate)}}  ><FaGithub />Continue with Github </Button>
         </Stack>
     </>);
 }

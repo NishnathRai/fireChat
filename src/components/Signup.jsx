@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import EmailAndPasswordBox from "./EmailAndPasswordBox";
+import usemakeUserSignupWithPassword from "@/hooks/usemakeUserSignupWithPassword";
 
 function Signup(){
 
@@ -13,6 +14,7 @@ function Signup(){
             password={password}
             setPassword={setPassword}
             buttonText={"Sign up"}
+            action={usemakeUserSignupWithPassword}
         />
     </>);
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import EmailAndPasswordBox from "./EmailAndPasswordBox";
 import { Button } from "@chakra-ui/react";
+import usemakeUserSigninWithPassword from "@/hooks/usemakeUserSigninWithPassword";
 
 function SigIn(){
 
@@ -14,6 +15,7 @@ function SigIn(){
             password={password}
             setPassword={setPassword}
             buttonText={"Sign in"}
+            action={usemakeUserSigninWithPassword}
         />
     </>);
 }
