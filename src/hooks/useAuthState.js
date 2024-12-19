@@ -3,22 +3,22 @@ import { auth } from "../../firebase";
 import { useEffect } from "react";
 
 function useAuthState(location,navigate){
-    // useEffect( ()=>{
-    //     onAuthStateChanged(auth,(user)=>{
-    //         if(user) {
-    //             if( location.pathname=="/login" ){
-    //                 navigate("/");
-    //             }
-    //             console.log(user);
-    //         }
-    //         else{
-    //             if( location.pathname!="/login" ){
-    //                 navigate("/login");
-    //             }
-    //             console.log("user is not there");
-    //         }
-    //     })
-    // } , [])
+    useEffect( ()=>{
+        onAuthStateChanged(auth,(user)=>{
+            if(user) {
+                if( location.pathname=="/login" ){
+                    navigate("/");
+                }
+                console.log(user);
+            }
+            else{
+                if( location.pathname!="/login" ){
+                    navigate("/login");
+                }
+                console.log("user is not there");
+            }
+        })
+    } , [])
 }
 
 

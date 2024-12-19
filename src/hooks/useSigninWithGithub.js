@@ -1,5 +1,6 @@
 import { signInWithPopup, GithubAuthProvider } from "firebase/auth";
 import { auth } from "../../firebase";
+import addUserToDb from "@/functions/addUserToDb";
 
 function useSigninWithGithub(navigate){
     const provider = new GithubAuthProvider();

@@ -7,7 +7,7 @@ class User{
         email="user@gmail.com",
         Uid="0000",
         profilPicture=defaultPp,
-        status="fire 🔥",
+        status="fire Chat 🫶",
         bio="The end is the Begining 🚀"
     ){
         this.Username=Username || "User";

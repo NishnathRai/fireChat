@@ -13,7 +13,7 @@ function Login(){
             style={{
                 height:"100dvh",
                 width:"100vw",
-                paddingTop:"4vh",
+                paddingTop:"1vh",
                 display:"flex",
                 alignItems:"center",
                 justifyContent:"center",

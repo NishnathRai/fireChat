@@ -1,5 +1,6 @@
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../firebase";
+import addUserToDb from "@/functions/addUserToDb";
 
 
 function useSigninWithGoogle(navigate){
