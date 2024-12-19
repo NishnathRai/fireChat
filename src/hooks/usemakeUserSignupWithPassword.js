@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import checkEmailAndPassword from "@/functions/checkEmailAndPassword";
+import addUserToDb from "@/functions/addUserToDb";
 
 function usemakeUserSignupWithPassword(navigate,email,password,setEmail,setPassword,setErrorMessage,setShouldLode){
     ///
@@ -12,7 +13,7 @@ function usemakeUserSignupWithPassword(navigate,email,password,setEmail,setPassw
         setEmail("");
         setPassword("");
         setErrorMessage("");
-        console.log(val);
+        addUserToDb(val.user.displayName,val.user.email,val.user.uid);
         navigate("/");
     })
     .catch((err)=>{

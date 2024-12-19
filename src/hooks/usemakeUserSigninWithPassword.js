@@ -8,7 +8,6 @@ function usemakeUserSigninWithPassword(navigate,email,password,setEmail,setPassw
     ///
     signInWithEmailAndPassword(auth,email,password)
     .then((val)=>{
-        console.log(val);
         navigate("/");
     })
     .catch((e)=>{
