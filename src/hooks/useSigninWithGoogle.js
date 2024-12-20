@@ -7,7 +7,9 @@ function useSigninWithGoogle(navigate){
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth,provider)
     .then((val)=>{
-        if(val.user.metadata.createdAt==val.user.metadata.lastLoginAt){
+        const createdAtInMinutes = Math.floor(val.user.metadata.createdAt / (1000 * 60));
+        const lastLoginAtInMinutes = Math.floor(val.user.metadata.lastLoginAt / (1000 * 60));
+        if( Math.abs(createdAtInMinutes-lastLoginAtInMinutes)<1){
             addUserToDb(val.user.displayName,val.user.email,val.user.uid);
         }
         navigate("/");

@@ -23,6 +23,7 @@ function EmailAndPasswordBox({email,setEmail,password,setPassword,buttonText,act
                         className="peer" 
                         placeholder="" 
                         value={email}
+                        size="lg"
                         onChange={(e)=>{
                             setEmail(e.target.value)
                         }}
@@ -40,6 +41,7 @@ function EmailAndPasswordBox({email,setEmail,password,setPassword,buttonText,act
                     onVisibleChange={setVisible}
                     placeholder="Password"
                     mb="1px"
+                    size="lg"
                     value={password}
                     onChange={(e)=>{
                         setPassword(e.target.value);

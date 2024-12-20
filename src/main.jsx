@@ -22,7 +22,7 @@ function Main(){
             alt='Logo fireChat'
             style={{
                 position:"fixed",
-                top:"9px",
+                top:"10.5px",
                 left:"7px",
             }}
         />
